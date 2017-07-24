@@ -158,10 +158,11 @@ void CMainThread::OnICDMessage(WPARAM wParam, LPARAM lParam)
 	switch (wParam)
 	{
 	case CICDThread::NOTIFY_CAPTURE_END:
-		m_pICDThread->GetImage(&m_iImage);// ICDThreadでキャプチャした画像を取得
+		m_pICDThread->GetImage(&m_iImage, 0);// ICDThreadでキャプチャした画像を取得
 		NotifyGui(wParam, lParam);
 		break;
 	case CICDThread::NOTIFY_DETECT_END:
+		m_pICDThread->GetImage(&m_iImage, 1);// ICDThreadで検出した画像を取得
 		NotifyGui(wParam, lParam);
 		break;
 	}

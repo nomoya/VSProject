@@ -2,9 +2,7 @@
 #include "stdlib.h"
 #include "ICDThread.h"
 #include "MainThread.h"
-#include "baseapi.h"
-#include "strngs.h"
-#include "resultiterator.h"
+
 
 
 IMPLEMENT_DYNCREATE(CICDThread, CBaseTask)
@@ -86,14 +84,23 @@ int CICDThread::ExitInstance()
 Name : GetImage()
 Desc : 他のスレッドがこの関数をつかって画像を取得する　
 ****************************************************************************/
-void CICDThread::GetImage(IplImage** image)
+void CICDThread::GetImage(IplImage** image, int type)
 {
 	EnterCriticalSection(&m_CriticalSection);
 	{
-		*image = cvCloneImage(m_iCaptureImage);
+		if (type == 0)
+		{
+			*image = cvCloneImage(m_iCaptureImage);
+		}
+		else if (type == 1)
+		{
+			*image = cvCloneImage(m_iDetectImage);
+		}
 	}
 	LeaveCriticalSection(&m_CriticalSection);
 }
+
+
 
 /****************************************************************************
 Name : OnMainThreadMessage()
@@ -122,7 +129,7 @@ void CICDThread::OnMainThreadMessage(WPARAM wParam, LPARAM lParam)
 			DetectSquare(m_iCaptureImage, &m_iDetectImage);
 			break;
 		case 2:
-			DetectEngText(m_iCaptureImage, &m_iDetectImage);
+			
 			break;
 		}
 		
@@ -249,7 +256,7 @@ void CICDThread::DetectCircle(const IplImage* srcIplImage, IplImage** getOutputI
 
 	// 2値化する
 	cvThreshold(grayImg, grayImg, 150, 255, CV_THRESH_BINARY);
-	cvShowImage("gray", grayImg);
+	//cvShowImage("gray", grayImg);
 
 	// 画像の平滑化（ハフ変換のための前処理）
 	cvSmooth(grayImg, grayImg, CV_GAUSSIAN, 11, 11, 0, 0);
@@ -264,11 +271,11 @@ void CICDThread::DetectCircle(const IplImage* srcIplImage, IplImage** getOutputI
 		cvCircle(copy_img, cvPoint(cvRound(p[0]), cvRound(p[1])), 3, CV_RGB(0, 255, 0), -1, 8, 0);
 		cvCircle(copy_img, cvPoint(cvRound(p[0]), cvRound(p[1])), cvRound(p[2]), CV_RGB(255, 0, 0), 3, 8, 0);
 	}
-	cvShowImage("Detect", copy_img);
+	//cvShowImage("Detect", copy_img);
 	cvReleaseImage(&grayImg);
 
 	// 結果を返す
-	*getOutputImage = grayImg;
+	*getOutputImage = copy_img;
 	//cvReleaseMemStorage(&storage);
 
 }
@@ -301,7 +308,7 @@ void CICDThread::DetectSquare(const IplImage* srcIplImage, IplImage** getOutputI
 	// 2値化する
 	cvThreshold(grayImg, grayImg, 150, 255, CV_THRESH_BINARY);
 	
-	cvShowImage("gray", grayImg);
+	//cvShowImage("gray", grayImg);
 
 	// 画像の平滑化（ハフ変換のための前処理）
 	//cvSmooth(tmp, tmp, CV_GAUSSIAN, 11, 11, 0, 0);
@@ -340,115 +347,9 @@ void CICDThread::DetectSquare(const IplImage* srcIplImage, IplImage** getOutputI
 	}
 	
 
-	cvShowImage("Detect", dstImg);
+	//cvShowImage("Detect", dstImg);
 
 	// 結果を返す
 	*getOutputImage = dstImg;
-}
-
-
-/****************************************************************************
-Name : DetectEngText()
-Desc : 英字テキストの検出
-参考:http://pg.blog.jp/archives/2825800.html
-****************************************************************************/
-void CICDThread::DetectEngText(const IplImage* srcIplImage, IplImage** getOutputImage){
-
-	STRING output;
-	// 出力先のtmp画像
-	IplImage *dst = cvCloneImage(srcIplImage);
-
-	// フォント設定
-	CvFont font;
-	CvSize text_size;
-	CString strMess;
-	cvInitFont(&font, CV_FONT_HERSHEY_SIMPLEX, 1, 1, 0, 1, 4);
-
-	// APIの準備と初期化
-	tesseract::TessBaseAPI tessBaseApi;
-	int nRet = tessBaseApi.Init(
-		"C:/Users/t/Documents/Visual Studio 2013/Projects/ImageProcessing/Release/",// データパス (tessdata の親ディレクトリ名) tessdata/はいらない 
-		"eng");             // 言語 "eng", "jpn" など
-
-	// 認識する文字を絞る（ホワイトリスト）
-	tessBaseApi.SetVariable("tessedit_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-
-	// bmp保存
-	CImage img;
-	IplToBmp(srcIplImage, &m_cBitmap);
-	img.Attach(m_cBitmap);
-	img.Save(_T("bmptest.bmp"));
-
-	// 文字の認識
-	bool success = tessBaseApi.ProcessPages(
-		"C:\\Users\\t\\Documents\\Visual Studio 2013\\Projects\\ICD\\Release\\bmptest.bmp",// 入力ファイル名
-		NULL,					// リトライconfigファイル名
-		0,						// タイムアウト値(msec) (0 は指定なし)
-		&output);				// 出力文字列
-
-
-	
-	tesseract::ResultIterator* ri = tessBaseApi.GetIterator();
-	tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
-
-	
-	if (ri != 0) {
-		do {
-			const char* word = ri->GetUTF8Text(level);
-			if (word == NULL || strlen(word) == 0) {
-				continue;
-			}
-
-			int x1, y1, x2, y2;
-			ri->BoundingBox(level, &x1, &y1, &x2, &y2);
-			float conf = ri->Confidence(level);
-			
-			//std::string text = UTF8toSJIS(word);
-			char cTemp[256];
-			sprintf_s(cTemp, "(%d, %d)-(%d, %d) : %.1f%% : %c \n", x1, y1, x2, y2, conf, word);
-			strMess += cTemp;
-
-		} while (ri->Next(level));
-	}
-
-	//char *text = new char[strMess.GetLength() + 1];
-	//strcpy(text, strMess);
-	
-	m_strDetectText = strMess;
-
-	/*
-	LPCSTR lpString = output.string();
-	sprintf_s(text, "[%s]", lpString);
-	*/
-
-	// 読み取った文字列を画像に張り付ける
-	//cvGetTextSize(text, &font, &text_size, 0);
-	//cvPutText(dst, text, cvPoint(0, text_size.height), &font, CV_RGB(255, 0, 0));
-
-	cvShowImage("Detect", dst);
-
-	// 結果を返す
-	*getOutputImage = dst;
-
-}
-
-std::string UTF8toSJIS(const char* src) {
-
-	// UTF8 -> UTF16
-	int lenghtUnicode = MultiByteToWideChar(CP_UTF8, 0, src, strlen(src) + 1, NULL, 0);
-	wchar_t* bufUnicode = new wchar_t[lenghtUnicode];
-	MultiByteToWideChar(CP_UTF8, 0, src, strlen(src) + 1, bufUnicode, lenghtUnicode);
-
-	// UTF16 -> ShiftJis
-	int lengthSJis = WideCharToMultiByte(CP_THREAD_ACP, 0, bufUnicode, -1, NULL, 0, NULL, NULL);
-	char* bufShiftJis = new char[lengthSJis];
-	WideCharToMultiByte(CP_THREAD_ACP, 0, bufUnicode, lenghtUnicode + 1, bufShiftJis, lengthSJis, NULL, NULL);
-
-	std::string strSJis(bufShiftJis);
-
-	delete bufUnicode;
-	delete bufShiftJis;
-
-	return strSJis;
 }
 

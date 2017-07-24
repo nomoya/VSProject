@@ -34,7 +34,7 @@ public:
 	};
 	*/
 
-	void GetImage(IplImage** image);
+	void GetImage(IplImage** image, int type);
 	void IplToBmp(const IplImage* srcIplImage, CBitmap* BmpMapData);
 
 	CString m_strDetectText;
@@ -56,7 +56,6 @@ protected:
 	int  ExitInstance();
 	void DetectCircle(const IplImage* srcIplImage, IplImage** getOutputImage);
 	void DetectSquare(const IplImage* srcIplImage, IplImage** getOutputImage);
-	void DetectEngText(const IplImage* srcIplImage, IplImage** getOutputImage);
 
 
 

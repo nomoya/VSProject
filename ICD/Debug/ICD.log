@@ -1,27 +1,11 @@
-﻿2017/07/24 15:13:08 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\ICD\ICD.vcxproj" (Build ターゲット)。
+﻿2017/07/24 17:17:30 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\t\Documents\GitHub\VSProject\ICD\ICD.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\t-kitaym\tesseract-3.01\ccmain" /I"C:\t-kitaym\tesseract-3.01\ccutil" /I"C:\t-kitaym\tesseract-3.01\ccstruct" /I"C:\t-kitaym\tesseract-3.01\api" /IC:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ICD.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ICD.cpp ICDDlg.cpp ICDThread.cpp MainThread.cpp ShotDlg.cpp
-         ShotDlg.cpp
-     1>c:\opencv\build\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-         ICDThread.cpp
-     1>c:\opencv\build\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-     1>c:\t-kitaym\tesseract-3.01\ccutil\platform.h(41): warning C4005: 'MAX_PATH' : マクロが再定義されました。
-                 c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(60) : 'MAX_PATH' の前の定義を確認してください
-     1>c:\users\t\documents\visual studio 2013\projects\icd\icd\icdthread.cpp(363): warning C4101: 'text_size' : ローカル変数は 1 度も使われていません。
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\t-kitaym\tesseract-3.01\ccmain" /I"C:\t-kitaym\tesseract-3.01\ccutil" /I"C:\t-kitaym\tesseract-3.01\ccstruct" /I"C:\t-kitaym\tesseract-3.01\api" /IC:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ICD.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ICDDlg.cpp
          ICDDlg.cpp
      1>c:\opencv\build\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-         コードを生成中...
-         コンパイル中...
-         MainThread.cpp
-     1>c:\opencv\build\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-         ICD.cpp
-     1>c:\opencv\build\include\opencv2\legacy\compat.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-         コードを生成中...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0411" /IDebug\ /nologo /fo"Debug\ICD.res" ICD.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\Debug\ICD.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\t-kitaym\tesseract-3.01\vs2010\Release" /LIBPATH:C:\opencv\build\x86\vc12\lib /LIBPATH:"C:\t-kitaym\tesseract-3.01\vs2008\lib" libtesseract.lib "liblept-static-mtdll.lib" opencv_calib3d2411.lib opencv_calib3d2411d.lib opencv_contrib2411.lib opencv_contrib2411d.lib opencv_core2411.lib opencv_core2411d.lib opencv_features2d2411.lib opencv_features2d2411d.lib opencv_flann2411.lib opencv_flann2411d.lib opencv_gpu2411.lib opencv_gpu2411d.lib opencv_highgui2411.lib opencv_highgui2411d.lib opencv_imgproc2411.lib opencv_imgproc2411d.lib opencv_legacy2411.lib opencv_legacy2411d.lib opencv_ml2411.lib opencv_ml2411d.lib opencv_nonfree2411.lib opencv_nonfree2411d.lib opencv_objdetect2411.lib opencv_objdetect2411d.lib opencv_ocl2411.lib opencv_ocl2411d.lib opencv_photo2411.lib opencv_photo2411d.lib opencv_stitching2411.lib opencv_stitching2411d.lib opencv_superres2411.lib opencv_superres2411d.lib opencv_ts2411.lib opencv_ts2411d.lib opencv_video2411.lib opencv_video2411d.lib opencv_videostab2411.lib opencv_videostab2411d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\Debug\ICD.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\Debug\ICD.lib" /MACHINE:X86 /SAFESEH:NO Debug\ICD.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\t\Documents\GitHub\VSProject\Debug\ICD.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\t-kitaym\tesseract-3.01\vs2010\Release" /LIBPATH:C:\opencv\build\x86\vc12\lib /LIBPATH:"C:\t-kitaym\tesseract-3.01\vs2008\lib" libtesseract.lib "liblept-static-mtdll.lib" opencv_calib3d2411.lib opencv_calib3d2411d.lib opencv_contrib2411.lib opencv_contrib2411d.lib opencv_core2411.lib opencv_core2411d.lib opencv_features2d2411.lib opencv_features2d2411d.lib opencv_flann2411.lib opencv_flann2411d.lib opencv_gpu2411.lib opencv_gpu2411d.lib opencv_highgui2411.lib opencv_highgui2411d.lib opencv_imgproc2411.lib opencv_imgproc2411d.lib opencv_legacy2411.lib opencv_legacy2411d.lib opencv_ml2411.lib opencv_ml2411d.lib opencv_nonfree2411.lib opencv_nonfree2411d.lib opencv_objdetect2411.lib opencv_objdetect2411d.lib opencv_ocl2411.lib opencv_ocl2411d.lib opencv_photo2411.lib opencv_photo2411d.lib opencv_stitching2411.lib opencv_stitching2411d.lib opencv_superres2411.lib opencv_superres2411d.lib opencv_ts2411.lib opencv_ts2411d.lib opencv_video2411.lib opencv_video2411d.lib opencv_videostab2411.lib opencv_videostab2411d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\t\Documents\GitHub\VSProject\Debug\ICD.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\t\Documents\GitHub\VSProject\Debug\ICD.lib" /MACHINE:X86 /SAFESEH:NO Debug\ICD.res
          Debug\BaseTask.obj
          Debug\ICD.obj
          Debug\ICDDlg.obj
@@ -29,93 +13,9 @@
          Debug\MainThread.obj
          Debug\ShotDlg.obj
          Debug\stdafx.obj
-         libtesseract.lib(baseapi.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
-     1>LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
-     1>BaseTask.obj : warning LNK4075: /EDITANDCONTINUE は /OPT:LBR の指定によって無視されます。
-     1>libtesseract.lib(pagesegmain.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(pagesegmain.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tesseractclass.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tesseractclass.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(scrollview.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(scrollview.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(paramsd.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(paramsd.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(svmnode.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(svmnode.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(ambigs.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(ambigs.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_control.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_control.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_reco_context.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_reco_context.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(svutil.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(svutil.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(beam_search.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(beam_search.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tesseract_cube_combiner.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tesseract_cube_combiner.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_utils.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_utils.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_object.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_object.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_unigrams.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_unigrams.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_set.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_set.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_tuning_params.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_tuning_params.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_size_model.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_size_model.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tess_lang_model.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tess_lang_model.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(classifier_factory.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(classifier_factory.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_bigrams.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_bigrams.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(search_node.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(search_node.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_altlist.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_altlist.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(search_column.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(search_column.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(neural_net.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(neural_net.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_samp.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_samp.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_search_object.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cube_search_object.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_list_lang_model.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(word_list_lang_model.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(bmp_8.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(bmp_8.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tess_lang_mod_edge.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(tess_lang_mod_edge.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(conv_net_classifier.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(conv_net_classifier.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(hybrid_neural_net_classifier.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(hybrid_neural_net_classifier.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_bmp.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_bmp.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_chebyshev.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_chebyshev.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_hybrid.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(feature_hybrid.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(altlist.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(altlist.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(neuron.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(neuron.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(input_file_buffer.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(input_file_buffer.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cached_file.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(cached_file.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_altlist.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(char_altlist.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(sigmoid_table.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'BaseTask.obj' と一致しません。
-     1>libtesseract.lib(sigmoid_table.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'BaseTask.obj' と一致しません。
-     1>LINK : warning LNK4098: defaultlib 'MSVCRT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
-     1>C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\Debug\ICD.exe : fatal error LNK1319: 80 の不一致が検出されました
-     1>プロジェクト "C:\Users\t\Documents\Visual Studio 2013\Projects\ICD\ICD\ICD.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+         ICD.vcxproj -> C:\Users\t\Documents\GitHub\VSProject\Debug\ICD.exe
+     1>プロジェクト "C:\Users\t\Documents\GitHub\VSProject\ICD\ICD.vcxproj" (Build ターゲット) のビルドが完了しました。
 
-ビルドに失敗しました。
+ビルドに成功しました。
 
-経過時間 00:00:08.91
+経過時間 00:00:01.97

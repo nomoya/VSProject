@@ -195,16 +195,23 @@ LRESULT CICDDlg::OnMainThreadMessage(WPARAM wParam, LPARAM lParam)
 		m_pMainThread->GetImage(&m_iImage);
 		IplToBmp(m_iImage, &m_cBitmap);
 		img.Attach(m_cBitmap);
-		img.Save(_T("bmptest.bmp"));
+		img.Save(_T("bmptestcapture.bmp"));
 		//ResizeGraphView(m_pDlgShotMode->m_cPicture_L, 500, 550);
 
 		m_pDlgShotMode->m_cPicture_L.SetBitmap(m_cBitmap);
 		Invalidate();
 		break;
 	case CICDThread::NOTIFY_DETECT_END:
+		m_pMainThread->GetImage(&m_iImage);
+		IplToBmp(m_iImage, &m_cBitmap);
+		img.Attach(m_cBitmap);
+		img.Save(_T("bmptestdetect.bmp"));
+		//ResizeGraphView(m_pDlgShotMode->m_cPicture_L, 500, 550);
 
+		m_pDlgShotMode->m_cPicture_R.SetBitmap(m_cBitmap);
+		Invalidate();
 		
-		m_pDlgShotMode->m_strEditMess.SetWindowTextW((LPCTSTR)m_pICDThread->m_strDetectText);
+		//m_pDlgShotMode->m_strEditMess.SetWindowTextW((LPCTSTR)m_pICDThread->m_strDetectText);
 		UpdateData(FALSE);
 		break;
 	}
